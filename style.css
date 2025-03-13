@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #4CAF50;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.card p {
+    font-size: 18px;
+    color: #777;
+}
+
+.content {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.profiles, .languages, .projects, .internships, .achievements, .contact {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profiles h2, .languages h2, .projects h2, .internships h2, .achievements h2, .contact h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+.profile-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    display: inline-block;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-details .name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-details .bio {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.view-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #45a049;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    nav .hamburger {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav .nav-links a {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .profiles h2, .languages h2, .projects h2, .internships h2, .achievements h2, .contact h2 {
+        font-size: 28px;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* make the items to align next after the other for the class .zxcv */
+.zxcva {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
